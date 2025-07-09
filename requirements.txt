@@ -1,0 +1,15 @@
+# Django Framework
+django
+
+# Django REST Framework (DRF)
+# Essencial para construir a API REST sobre o Django.
+djangorestframework
+
+# JWT Authentication for DRF
+# Para gerar e validar os tokens de autenticação (login).
+djangorestframework-simplejwt
+
+# Django CORS Headers
+# Permite que seu frontend Angular (em http://localhost:4200)
+# faça requisições para a sua API Django (em http://localhost:8000).
+django-cors-headers

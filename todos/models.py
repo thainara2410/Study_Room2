@@ -22,3 +22,13 @@ class Reservation(models.Model):
 
     def __str__(self):
         return f"{self.room.name} - {self.start_time:%d/%m %H:%M} até {self.end_time:%H:%M}"
+
+    def save(self, *args, **kwargs):
+        self.room.available = False
+        self.room.save()
+        super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        self.room.available = True
+        self.room.save()
+        super().delete(*args, **kwargs)
